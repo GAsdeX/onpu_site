@@ -4,7 +4,8 @@ $('#head-slider').slick({
 	autoplay: true
 });
 $('#discover-slider').slick({
-	slidesToShow: 5
+	slidesToShow: 5,
+	arrows: false
 });
 var $subHeader = $('.site-sub-header');
 var $scrollWindow = $('.scroll-header');
