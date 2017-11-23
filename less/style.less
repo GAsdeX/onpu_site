@@ -57,7 +57,7 @@ input {
 }
 
 .scroll-header {
-	height: 70px;
+	min-height: 70px;
 	background: @gamma-blue;
 	position: fixed;
 	left: 0;
@@ -86,6 +86,36 @@ input {
 			background-repeat: no-repeat;
 			background-position: center;
 		    background-size: auto 80%;
+		}
+	}
+	.media-nav {
+		margin-top: 93px;
+	    margin-bottom: 30px;
+
+		.item {
+			color: white;
+		    padding: 15px;
+		    font-size: 20px;
+		    text-transform: uppercase;
+		    padding-left: 70px;
+		    position: relative;
+		    height: 100%;
+		    box-sizing: border-box;
+			margin: 3px;
+			background: #082E58;
+
+			&:after {
+				content: '';
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    width: 60px;
+			    background-image: url(../img/icon-1.svg);
+			    background-position: center;
+			    background-size: 50%;
+			    background-repeat: no-repeat;
+			}
 		}
 	}
 }
@@ -243,7 +273,46 @@ input {
 		}
 	}
 }
+.mobile-menu {
+	background: #002147;
 
+	.wrapper {
+		.sub-header-box {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-between;
+
+			.item {
+				color: white;
+				padding: 15px;
+				font-size: 20px;
+				text-transform: uppercase;
+				padding-left: 70px;
+				position: relative;
+				height: 100%;
+				box-sizing: border-box;
+				display: flex;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					width: 60px;
+					background-image: url('../img/icon-1.svg');
+					background-position: center;
+					background-size: 50%;
+					background-repeat: no-repeat;
+				}
+				span {
+					margin: auto 0;
+				}
+			}
+		}
+	}
+}
 .section-title {
 	color: #333;
 	padding: 30px 0;
@@ -259,7 +328,6 @@ input {
 	    vertical-align: middle;
 	}
 }
-
 .card-item {
 	.image {
 		width: 100%;
@@ -280,7 +348,6 @@ input {
 
 	}
 }
-
 .site-content {
 	.wrapper {
 		.row-12 {
@@ -332,13 +399,12 @@ input {
 		}
 	}
 	.events-news-section{
+		display: block;
 
 		.section-title {
 			color: #333;
 		}
-		display: block;
 		.go-to {
-			display: inline-block;
 			cursor: pointer;
 			color: #999;
 			margin-left: 20px;
@@ -383,6 +449,12 @@ input {
 			}
 		}
 	}
+	.media-events-hide {
+		display: inline-block;
+	}
+	.media-events-show {
+		display: none;
+	}
 	.discover-section {
 		background: #eee;
 		padding-bottom: 30px;
@@ -409,6 +481,7 @@ input {
 
 		.study-item {
 			position: relative;
+			padding-top: 20px;
 
 			.image {
 				height: 250px;

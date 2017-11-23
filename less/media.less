@@ -1,5 +1,12 @@
 @media(max-width: 1200px) {
 	.site-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+		background: white;
+
 		.media-site-nav {
 			display: flex;
 
@@ -7,13 +14,35 @@
 				cursor: pointer;
 			}
 		}
-		.site-nav {
-			display: none;
-		}
+	}
+	.scroll-header {
+		margin-top: 147px;
+	    padding-top: 25px;
+
+	}
+	.site-nav {
+		display: none !important;
 	}
 	.site-sub-header {
+		display: none;
+
 		.wrapper .sub-header-box .item span {
 			font-size: 14px;
+		}
+	}
+	.site-content {
+		padding-top: 70px;
+
+		.events-news-section {
+			.card-item {
+				padding-top: 38px;
+			}
+			.media-events-hide {
+				display: none !important;
+			}
+			.media-events-show {
+				display: inline-block !important;
+			}
 		}
 	}
 }

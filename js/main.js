@@ -5,23 +5,51 @@ $('#head-slider').slick({
 });
 $('#discover-slider').slick({
 	slidesToShow: 5,
-	arrows: false
+	arrows: false,
+	responsive: [
+	    {
+	      breakpoint: 1200,
+		  settings: {
+	        slidesToShow: 2
+	      }
+	    },
+	    {
+	      breakpoint: 600,
+	      settings: {
+	        slidesToShow: 1
+	      }
+	    }
+	]
 });
 var $subHeader = $('.site-sub-header');
 var $scrollWindow = $('.scroll-header');
 
+$('#menu-button').click(function() {
+	console.log('asdasd');
+	if ($scrollWindow.hasClass('active')) {
+		$scrollWindow.removeClass('active');
+
+	} else {
+		$scrollWindow.addClass('active');
+	}
+});
+
 $(document).scroll(function(){
 	if ($(document).scrollTop() > ($subHeader.height() + $subHeader.offset().top)) {
+		if ($(window).width() > 1200) {
+			if (!($scrollWindow.hasClass('active'))) {
+				console.log('more');
 
-		if (!($scrollWindow.hasClass('active'))) {
-			console.log('more');
-
-			$scrollWindow.addClass('active');
+				$scrollWindow.addClass('active');
+			}
 		}
 	} else {
-		console.log('less');
-		if (($scrollWindow.hasClass('active'))) {
-			$scrollWindow.removeClass('active');
+		if ($(window).width() > 1200) {
+			console.log('less');
+			if (($scrollWindow.hasClass('active'))) {
+				$scrollWindow.removeClass('active');
+			}
 		}
+
 	}
 });
