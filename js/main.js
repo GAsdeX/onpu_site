@@ -22,15 +22,16 @@ $('#discover-slider').slick({
 	]
 });
 var $subHeader = $('.site-sub-header');
+var $mobileMenu = $('.mobile-menu');
 var $scrollWindow = $('.scroll-header');
 
 $('#menu-button').click(function() {
 	console.log('asdasd');
-	if ($scrollWindow.hasClass('active')) {
-		$scrollWindow.removeClass('active');
+	if ($mobileMenu.hasClass('active')) {
+		$mobileMenu.removeClass('active');
 
 	} else {
-		$scrollWindow.addClass('active');
+		$mobileMenu.addClass('active');
 	}
 });
 
